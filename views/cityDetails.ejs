@@ -1,0 +1,44 @@
+<!-- table to display a single city -->
+<table border="1">
+    <% details.forEach((city)=>
+        { %>
+        <tr>
+            <th>City Code</th>
+            <td><%= city.cty_code %></td>
+        </tr>
+        <tr>
+            <th>City Name</th>
+            <td><%= city.cty_name %></td>
+        </tr>
+        <tr>
+            <th>Population</th>
+            <td><%= city.population %></td>
+        </tr>
+        <tr>
+            <th>By the Sea</th>
+            <td><%= city.isCoastal %></td>
+        </tr>
+        <tr>
+            <th>Area</th>
+            <td><%= city.areaKM %></td>
+        </tr>
+
+        <% }) %>
+
+        <% details.forEach((country)=>
+        { %> 
+            <tr>
+                <th>Country Code</th>
+                <td><%= country.co_code %></td>
+            </tr>
+            <tr>
+                <th>Country Name</th>
+                <td><%= country.co_name %></td>
+            </tr>
+
+        <% }) %> 
+</table>
+
+<br></br>
+
+<button onclick="location.href='/'" type="button">Home</button>

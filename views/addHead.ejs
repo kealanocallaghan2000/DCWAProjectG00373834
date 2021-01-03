@@ -1,0 +1,35 @@
+<html>
+<body>
+
+<h1>Add Head of State</h1>
+
+<!-- ejs text to handle the errors -->
+<% if (errors != undefined) { %>
+    <ul>
+            <% errors.forEach((error) => { %>
+                    <li><%= error.msg %></li>
+            <% }) %>
+    </ul>
+<% } %>
+
+<!-- FORM FOR ADDING A HEAD -->
+<form action="/addHead" method="POST">
+        <label>Country Code</label>
+        <input type='text' name="_id">
+        </input>
+        <br></br>
+        <label>Head of State</label>
+        <input type='text'name="headOfState">
+        </input>
+        
+        <br></br>
+        <input onclick="location.href='/addHead'" type="Submit" value="Add">
+</form>
+
+<br></br>
+
+<!-- home button -->
+<button onclick="location.href='/'" type="button">Home</button>
+
+</body>
+</html>

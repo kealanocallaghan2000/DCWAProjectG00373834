@@ -1,0 +1,33 @@
+<h1>Heads of State</h1>
+
+
+<button onclick="location.href='/addHeadPage'" type="button">Add Head of State</button>
+
+<br></br>
+
+<!-- table to display the heads of state -->
+<table border="1">
+    <tr>
+        <th>Country Code</th>
+        <th>Head of State</th>
+
+    </tr>
+    <% heads.forEach((head)=>
+        { %>
+        <tr>
+            <td>
+                <%= head._id %>
+            </td>
+            <td>
+                <%= head.headOfState %>
+            </td>
+            <td>
+                <a href="./deleteHead/<%= head._id %>">Delete</a>
+            </td>
+        </tr>
+        <% }) %>
+</table>
+
+<br></br>
+
+<button onclick="location.href='/'" type="button">Home</button>
